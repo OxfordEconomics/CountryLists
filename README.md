@@ -1,5 +1,5 @@
 # CountryLists
-Member country lists (e.g., UN) and country lists kept by organisations (e.g., ISO)
+This repository contains programs to automatically fetch country the latest country lists from various websites.
 
 # Suggestions for other lists
 - OECD
