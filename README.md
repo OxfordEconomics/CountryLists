@@ -5,3 +5,5 @@ This repository contains programs to automatically fetch country the latest coun
 - OECD
 - EU
 - ISO
+- ASEAN
+- Mercosur
