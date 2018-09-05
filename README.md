@@ -3,7 +3,7 @@ This repository contains programs to automatically fetch the latest country list
 
 # Suggestions for other lists
 - OECD
-- EU
 - ISO
 - ASEAN
 - Mercosur
+- Shengen
