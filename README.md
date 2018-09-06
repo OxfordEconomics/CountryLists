@@ -6,4 +6,3 @@ This repository contains programs to automatically fetch the latest country list
 - ISO
 - ASEAN
 - Mercosur
-- Shengen
