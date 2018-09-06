@@ -3,5 +3,4 @@ This repository contains programs to automatically fetch the latest country list
 
 # Suggestions for other lists
 - ISO
-- ASEAN
 - Mercosur
