@@ -16,11 +16,11 @@ memberstates = soup.find_all(class_='member-state-name')
 
 memberstates = str(memberstates).replace("<span class=\"member-state-name\">","").replace("</span>","").replace(", ","\n").replace("[","CountryName"+datetime.datetime.today().strftime('%Y-%m-%d')+"\n").replace("]","")
 
-f = open('CountryList-UN.csv','w')
+f = open('../CountryList-UN.csv','w')
 f.write(memberstates)
 f.close()
 
-f = open('CountryList-UN.csv','r')
+f = open('../CountryList-UN.csv','r')
 print(f.readlines())
 
 

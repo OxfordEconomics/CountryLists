@@ -23,7 +23,7 @@ print (soup)
 
 
 # Initialise new csv file
-f=open('CountryList-OECD.csv','w')
+f=open('../CountryList-OECD.csv','w')
 f.write('OecdMembers'+datetime.datetime.today().strftime('%Y-%m-%d')+'\n')
 f.close()
 
@@ -32,7 +32,7 @@ for x in soup:
 	if x.text != 'More on membership and enlargement':
 		soup = x.text.title() #use title() to capitalise the beginning of each part of country names
 		print(soup)
-		f=open('CountryList-OECD.csv','a')
+		f=open('../CountryList-OECD.csv','a')
 		f.write(soup+'\n')
 		f.close()
 	
