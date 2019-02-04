@@ -1,4 +1,4 @@
-# Get UN country list
+# Get OECD country list
 
 # Install dependencies
 # pip install requests

@@ -1,4 +1,4 @@
-# Get UN country list
+# Get EU country list
 
 # Install dependencies
 # pip install requests
