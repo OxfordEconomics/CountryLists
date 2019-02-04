@@ -10,7 +10,7 @@ Tip: Only convert the ISO codes back to country names, in the style and language
 This repository contains:
 - conversion files (called IsoToXX) which allow you to standardise your datasets so that they use ISO codes.
 - up-to-date lists of member countries in various clubs (e.g., the EU, OECD, ASEAN, etc.).
-- Python program files that you can use automatically fetch updated lists from official websites.
+- Python program files that you can use automatically fetch updated country lists from official websites.
 
 # Possible future additions
 - Mercosur
