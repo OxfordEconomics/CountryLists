@@ -1,5 +1,7 @@
 # Who should use this resource?
-Anybody who needs interoperability between country-level datasets from multiple sources, or wants to know the latest official list of countries in a particular club.
+Anybody who:
+- needs interoperability between country-level datasets from multiple sources.
+- wants to know the latest official list of countries in a particular club.
 
 # What problem does this solve?
 Different datasets inevitably use different country names and codes. Converting all country names and codes to ISO codes at the beginning of every cross-country project makes it possible to quickly use and compare data across, e.g., a UN database that has data for the **Democratic Republic of the Congo**, a World Bank database with information about **Congo, Dem. Rep.** and an Oxford Economics database that has data for **Congo, DR**.
