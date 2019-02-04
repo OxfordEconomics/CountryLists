@@ -1,13 +1,16 @@
-# What is this?
+# Who should use this resource?
+Anybody who needs interoperability between country-level datasets from multiple sources.
+
+# What problem does this solve?
+Different datasets inevitably use different country names and codes. Converting all country names and codes to ISO codes at the beginning of every cross-country project makes it possible to quickly use and compare data across a UN database that has data for the *Democratic Republic of the Congo*, a World Bank database with information about *Congo, Dem. Rep.* and an Oxford Economics database that has data for *Congo, DR*.
+
+Tip: Only convert the ISO codes back to country names, in the style and language of your chice, once your analysis is complete and it's time to start creating charts and tables for your report or presentation.
+
+# What is here?
 This repository contains:
+- conversion files (called IsoToXX) which allow you to standardise your datasets so that they use ISO codes.
 - up-to-date lists of member countries in various clubs (e.g., the EU, OECD, ASEAN, etc.).
 - Python program files that you can use automatically fetch updated lists from official websites.
-- conversion files (called IsoToXX) which allow you to standardise your datasets so that they use ISO codes. 
-
-# Recommendation for multi-country projects
-Any multi-country project is much simplified by using ISO codes for all stages of analysis. Only convert the ISO codes to country names in the language of your choice once your analysis is complete and it's time to start creating charts and tables for your report or presentation.
-
-If you do not do this, it is remarkably easy to make mistakes in your analysis because in one place you've called it "UK" and in another "United Kingdom" or in one place "Macao" and another "Macau".
 
 # Possible future additions
 - Mercosur
