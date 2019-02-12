@@ -7,7 +7,6 @@
 import urllib.request
 from bs4 import BeautifulSoup
 import datetime
-import datetime
 
 page = urllib.request.urlopen('http://asean.org/asean/asean-member-states/')
 

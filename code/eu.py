@@ -7,17 +7,16 @@
 import urllib.request
 from bs4 import BeautifulSoup
 import datetime
-import datetime
 
 page = urllib.request.urlopen('https://europa.eu/european-union/about-eu/countries_en')
 
 soup = BeautifulSoup(page,'html.parser')
 
-
-
 soup = soup.find('div',id="year-entry2")
 
 soup = soup.find_all('a')
+
+print(soup)
 
 # Initialise new csv file
 f=open('../CountryList-EU.csv','w')

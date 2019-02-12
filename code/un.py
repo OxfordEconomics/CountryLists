@@ -12,6 +12,8 @@ page = urllib.request.urlopen('http://www.un.org/en/member-states/index.html')
 
 soup = BeautifulSoup(page,'html.parser')
 
+print(soup)
+
 memberstates = soup.find_all(class_='member-state-name')
 
 memberstates = str(memberstates).replace("<span class=\"member-state-name\">","").replace("</span>","").replace(", ","\n").replace("[","CountryName"+datetime.datetime.today().strftime('%Y-%m-%d')+"\n").replace("]","")
@@ -22,12 +24,4 @@ f.close()
 
 f = open('../CountryList-UN.csv','r')
 print(f.readlines())
-
-
-
-
-
-
-
-
 

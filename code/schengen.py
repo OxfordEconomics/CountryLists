@@ -7,7 +7,6 @@
 import urllib.request
 from bs4 import BeautifulSoup
 import datetime
-import datetime
 
 page = urllib.request.urlopen('https://europa.eu/european-union/about-eu/countries_en')
 

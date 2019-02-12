@@ -7,20 +7,16 @@
 import urllib.request
 from bs4 import BeautifulSoup
 import datetime
-import datetime
 
 page = urllib.request.urlopen('http://www.oecd.org/about/membersandpartners/list-oecd-member-countries.htm')
 
 soup = BeautifulSoup(page,'html.parser')
-
-
 
 soup = soup.find('table',align='center')
 
 soup = soup.find_all('a')
 
 print (soup)
-
 
 # Initialise new csv file
 f=open('../CountryList-OECD.csv','w')
