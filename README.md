@@ -26,3 +26,49 @@ If you have a suggestion for an ISO-name pairing or an international country lis
 # Possible future additions to CountryList files
 - Mercosur
 - APEC
+
+
+# Use examples
+## Excel
+
+Suppose you have a spreadsheet called nonStandardCountryNames with country names in Column A of Sheet1. Place IsoFromCountryNames.csv in the same folder, open it, then type this into column B of nonStandardCountryNames:
+
+```
+=INDEX(IsoFromCountryNames.csv!$A:$A,MATCH(A2,IsoFromCountryNames.csv!$B:$B,0))
+```
+
+## SQL
+
+Anything starting with "my" in the code below should be changed to your desired names.
+
+First, import your tables. For example, if you use SQLite, enter these commands into the SQLite command line:
+
+```
+/************************* Import ISO to your SQL database *************************/
+.mode csv
+.import "c:/myDirectory/IsoFromCountryNames.csv" IsoFromCountryNames
+.import "c:/myDirectory/myTableWithNonstandardCountryNames.csv" myTableWithNonstandardCountryNames
+```
+
+Next, put this code into a .sql file and run it in your database manager:
+```
+/************************* Join country ISO codes for REPORTER *************************/
+/** Create a table in my database called myTableWithStandardCountryNames **/
+CREATE TABLE myTableWithStandardCountryNames AS
+
+/** Populate it with all columns (hence ".*") from a table called myTableWithNonstandardCountryNames, plus the ISO column from IsoFromCountryNames and name that column myPreferredColumnName **/
+SELECT myTableWithNonstandardCountryNames.*, IsoFromCountryNames.ISO AS myPreferredColumnName
+
+/** The starting table is myTableWithNonstandardCountryNames **/
+FROM myTableWithNonstandardCountryNames
+
+/** The table I want to get the ISO names from is IsoFromCountryNames**/
+LEFT OUTER JOIN IsoFromCountryNames
+
+/** I want to get the ISO names starting from the columns myColumnNameContainingNonStandardCountryNames and "English short name" **/
+ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(IsoFromCountryNames."English short name");
+```
+
+## Python
+
+To update the CountryList-XX.csv files, just download or clone this repository to your PC, then double click the *RunAll.bat* file in the *code* folder.
