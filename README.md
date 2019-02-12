@@ -31,9 +31,9 @@ If you have a suggestion for an ISO-name pairing or an international country lis
 # Use examples
 ## Excel
 
-Here is an [example in Excel](https://github.com/OxfordEconomics/CountryLists/tree/master/example-StandardiseCountries-Excel). This is the example works: 
+Here is an [example in Excel](https://github.com/OxfordEconomics/CountryLists/tree/master/example-StandardiseCountries-Excel).  
 
-Suppose you have a spreadsheet called nonStandardCountryNames with country names in Column A of Sheet1. Place [IsoFromCountryNames.csv](https://github.com/OxfordEconomics/CountryLists/blob/master/IsoFromCountryNames.csv) in the same folder, open it, then type this into column B of nonStandardCountryNames.
+Here is the explanation for the example in Excel: Suppose you have a spreadsheet called nonStandardCountryNames with country names in Column A of Sheet1. Place [IsoFromCountryNames.csv](https://github.com/OxfordEconomics/CountryLists/blob/master/IsoFromCountryNames.csv) in the same folder, open it, then type this into column B of nonStandardCountryNames.
 
 ```
 =INDEX(IsoFromCountryNames.csv!$A:$A,MATCH(A2,IsoFromCountryNames.csv!$B:$B,0))
@@ -41,7 +41,7 @@ Suppose you have a spreadsheet called nonStandardCountryNames with country names
 
 ## SQL
 
-Anything starting with "my" in the code below should be changed to your desired names.
+Anything starting with `my` in the code below should be changed to your desired name.
 
 First, import your tables. For example, if you use SQLite, enter these commands into the SQLite command line:
 
