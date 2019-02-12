@@ -1,13 +1,15 @@
-# Who should use this resource?
-Anybody who:
-- needs interoperability between country-level datasets from multiple sources.
-- wants the latest official list of countries in a particular international club (e.g, the UN, EU, etc.).
-
 # What is in this repository?
 This repository contains:
 - conversion files (called IsoToXX) which allow you to standardise your datasets so that they use ISO codes.
 - up-to-date lists of member countries in various clubs (e.g., the EU, OECD, ASEAN, etc.).
 - Python program files that you can use to automatically fetch updated country lists from official websites.
+- An example use case in Excel
+- Examples of Excel, SQL, and Python use cases documented in this readme
+
+# Who should use this resource?
+Anybody who:
+- needs interoperability between country-level datasets from multiple sources.
+- wants the latest official list of countries in a particular international club (e.g, the UN, EU, etc.).
 
 # What problem does this repository solve?
 ## IsoFromXX files
