@@ -38,7 +38,7 @@ Here is the explanation for the example in Excel: Suppose you have a spreadsheet
 
 Anything starting with `my` in the code below should be changed to your desired name.
 
-First, import your tables. For example, if you use SQLite, enter these commands into the SQLite command line:
+First, import the required tables into your database. For example, if you use SQLite, enter these commands into the SQLite command line:
 
 ```
 /************************* Import ISO to your SQL database *************************/
