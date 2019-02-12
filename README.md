@@ -24,7 +24,7 @@ Saves you the 60 seconds it takes to find the official website of the country cl
 
 This repository has a wide range of use cases. Below are example use cases for Excel, SQL, and Python.
 
-## Excel
+## Excel use case
 
 Here is an [example in Excel](https://github.com/OxfordEconomics/CountryLists/tree/master/example-StandardiseCountries-Excel).  
 
@@ -34,7 +34,7 @@ Here is the explanation for the example in Excel: Suppose you have a spreadsheet
 =INDEX(IsoFromCountryNames.csv!$A:$A,MATCH(A2,IsoFromCountryNames.csv!$B:$B,0))
 ```
 
-## SQL
+## SQL use case
 
 Anything starting with `my` in the code below should be changed to your desired name.
 
@@ -66,7 +66,7 @@ LEFT OUTER JOIN IsoFromCountryNames
 ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(IsoFromCountryNames."English short name");
 ```
 
-## Python
+## Python use case
 
 The Python files are to update the the CountryList-XX.csv files. To do so,  download or clone this repository to your PC, then double click the *RunAll.bat* file in the *code* folder.
 
