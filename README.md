@@ -28,7 +28,10 @@ If you have a suggestion for an ISO-name pairing or an international country lis
 - APEC
 
 
-# Use examples
+# Example uses
+
+There are use cases for Excel, SQL, and Python.
+
 ## Excel
 
 Here is an [example in Excel](https://github.com/OxfordEconomics/CountryLists/tree/master/example-StandardiseCountries-Excel).  
@@ -73,4 +76,4 @@ ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCou
 
 ## Python
 
-To update the CountryList-XX.csv files, just download or clone this repository to your PC, then double click the *RunAll.bat* file in the *code* folder.
+The Python files are to update the the CountryList-XX.csv files. To do so,  download or clone this repository to your PC, then double click the *RunAll.bat* file in the *code* folder.
