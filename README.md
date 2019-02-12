@@ -49,7 +49,7 @@ First, import the required tables into your database. For example, if you use SQ
 
 Next, put this code into a .sql file and run it, either via a command prompt or in your database manager (e.g., [DBeaver](https://dbeaver.io/)):
 ```
-/************************* Create a table with all the data in myTableWithNonstandardCountryNames plus standard ISO codes *************************/
+/************************* Add ISO codes to table containing non-standard country names *************************/
 /** Create a table in my database called myTableWithStandardCountryNames **/
 CREATE TABLE myTableWithStandardCountryNames AS
 
