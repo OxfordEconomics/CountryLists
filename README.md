@@ -52,7 +52,7 @@ First, import your tables. For example, if you use SQLite, enter these commands 
 .import "c:/myDirectory/myTableWithNonstandardCountryNames.csv" myTableWithNonstandardCountryNames
 ```
 
-Next, put this code into a .sql file and run it in your database manager:
+Next, put this code into a .sql file and run it, either in a command prompt or in your database manager (e.g., [DBeaver](https://dbeaver.io/)):
 ```
 /************************* Join country ISO codes for REPORTER *************************/
 /** Create a table in my database called myTableWithStandardCountryNames **/
