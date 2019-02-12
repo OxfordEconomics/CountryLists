@@ -20,14 +20,6 @@ Tip: Only convert the ISO codes back to country names, in the style and language
 
 Saves you the 60 seconds it takes to find the official website of the country club in question and remove whatever website formatting that makes it tedious to quickly incorporate the country names into your spreadsheet.
 
-# Your contributions are welcome!
-If you have a suggestion for an ISO-name pairing or an international country list, please feel free to [submit a feature request](https://github.com/OxfordEconomics/CountryLists/issues "Raise an Issue") or branch this repo and [submit a pull request](https://yangsu.github.io/pull-request-tutorial/ "A Visual Guide to Pull Requests").
-
-# Possible future additions to CountryList files
-- Mercosur
-- APEC
-
-
 # Example uses
 
 This repository has a wide range of use cases. Below are example use cases for Excel, SQL, and Python.
@@ -77,3 +69,10 @@ ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCou
 ## Python
 
 The Python files are to update the the CountryList-XX.csv files. To do so,  download or clone this repository to your PC, then double click the *RunAll.bat* file in the *code* folder.
+
+# Your contributions are welcome!
+If you have a suggestion for an ISO-name pairing or an international country list, please feel free to [submit a feature request](https://github.com/OxfordEconomics/CountryLists/issues "Raise an Issue") or branch this repo and [submit a pull request](https://yangsu.github.io/pull-request-tutorial/ "A Visual Guide to Pull Requests").
+
+# Possible future additions to CountryList files
+- Mercosur
+- APEC
