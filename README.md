@@ -72,20 +72,22 @@ ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCou
 
 Use the Python files to update the the CountryList-XX.csv files.
 
-To run an individual python file, like *asean.py* type the following into your command prompt:
-
-```
-py fileName.py
-```
-
-To run all  download or clone this repository to your PC, then double click the *RunAll.bat* file in the */code* folder. 
-
-If you get any errors, remember to install dependencies by typing the following into your command prompt:
+Before doing anything else, install dependencies by typing these one at a time into your command prompt:
 
 ```
 pip install requests
 pip install BeautifulSoup4
 ```
+
+To run an individual python file, for example *asean.py*, type the following into your command prompt:
+
+```
+py asean.py
+```
+
+To run all python files at once, download or clone this repository to your PC, then double click the *RunAll.bat* file in the */code* folder. 
+
+
 
 
 
