@@ -85,7 +85,7 @@ To run an individual python file, for example *asean.py*, type the following int
 py asean.py
 ```
 
-To run all python files at once, download or clone this repository to your PC, then double click the *RunAll.bat* file in the */code* folder. 
+To run all python files at once, download or clone this repository to your PC, then double click the `RunAll.bat` file in the `/code` folder. 
 
 
 
