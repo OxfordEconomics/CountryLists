@@ -33,7 +33,7 @@ Here is an [example use case in Excel](https://github.com/OxfordEconomics/Countr
 Here is the explanation for the example in Excel: Suppose you have a spreadsheet called nonStandardCountryNames with country names in Column A of Sheet1. Place [IsoFromCountryNames.csv](https://github.com/OxfordEconomics/CountryLists/blob/master/IsoFromCountryNames.csv) in the same folder, open it, then type this into Cell 2 of Column B of nonStandardCountryNames.
 
 ```
-=INDEX(IsoFromCountryNames.csv!$A:$A,MATCH(A2,IsoFromCountryNames.csv!$B:$B,0))
+=INDEX(isoFromCountryNames.csv!$A:$A,MATCH(A2,isoFromCountryNames.csv!$B:$B,0))
 ```
 
 ## SQLite use case
