@@ -49,7 +49,7 @@ First, import the required tables into your database. For example, if you use SQ
 .import "c:/myDirectory/myTableWithNonstandardCountryNames.csv" myTableWithNonstandardCountryNames
 ```
 
-Next, put the following code into a .sql file and run it, either via a command prompt or in your database manager (e.g., [DBeaver](https://dbeaver.io/)):
+Next, put the following code into a .sql file (called, e.g., `myScript.sql`) and run it in your favourite database manager (e.g., [DBeaver](https://dbeaver.io/)) or in sqlite by typing `.open myDatabaseName` (this will create the database if it doesn't already exist) followed by `.read myScript.sql`:
 ```
 /************************* Add ISO codes to table containing non-standard country names *************************/
 /** Create a table in my database called myTableWithStandardCountryNames **/
@@ -68,7 +68,7 @@ LEFT OUTER JOIN isoFromCountryNames
 ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(isoFromCountryNames."EnglishNames");
 ```
 
-Here is the full example using files in this repository:
+Below is the full example using files in this repository. You can run this script (called, e.g., `myScript.sql`) in sqlite by typing `.open myDatabaseName` (this will create the database if it doesn't already exist) followed by `.read myScript.sql`:
 
 ```
 /************************* Import ISO to your SQLite database *************************/
