@@ -70,7 +70,7 @@ ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCou
 
 ## Python use case
 
-## Match ISO codes to country names
+### Match ISO codes to country names
 
 You can find this example in a Python file [here](https://github.com/OxfordEconomics/CountryLists/tree/master/exampleUseCase-Python).
 
@@ -95,7 +95,7 @@ standardCountryNames.to_csv('standardCountryNames.csv')
 
 ```
 
-## Update countryList-XX.csv files
+### Update countryList-XX.csv files
 Use the Python files to update the the CountryList-XX.csv files.
 
 Before doing anything else, install dependencies by typing these one at a time into your command prompt:
