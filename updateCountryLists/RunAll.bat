@@ -1,6 +1,4 @@
-z:
-
-cd Z:\CountryLists\code
+cd %~dp0
 
 py asean.py
 py eu.py
