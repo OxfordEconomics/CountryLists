@@ -65,7 +65,32 @@ FROM myTableWithNonstandardCountryNames
 LEFT OUTER JOIN isoFromCountryNames
 
 /** I want to get the ISO names starting from the columns myColumnNameContainingNonStandardCountryNames and "English short name" **/
-ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(isoFromCountryNames."English short name");
+ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(isoFromCountryNames."EnglishNames");
+```
+
+Here it is using files in this repository as an example:
+
+```
+/************************* Import ISO to your SQLite database *************************/
+.mode csv
+.import "isoFromCountryNames.csv" isoFromCountryNames
+.import "countryList-EU.csv" myTableWithNonstandardCountryNames
+
+/************************* Add ISO codes to table containing non-standard country names *************************/
+/** Create a table in my database called myTableWithStandardCountryNames **/
+CREATE TABLE myTableWithStandardCountryNames AS
+
+/** Populate it with all columns (hence ".*") from a table called myTableWithNonstandardCountryNames, plus the ISO column from IsoFromCountryNames and name that column myPreferredColumnName **/
+SELECT myTableWithNonstandardCountryNames."EuMemberStates2019-02-20", isoFromCountryNames.ISO AS ISO
+
+/** The starting table is myTableWithNonstandardCountryNames **/
+FROM myTableWithNonstandardCountryNames
+
+/** The table I want to get the ISO names from is isoFromCountryNames**/
+LEFT OUTER JOIN isoFromCountryNames
+
+/** I want to get the ISO names starting from the columns myColumnNameContainingNonStandardCountryNames and "English short name" **/
+ON upper(myTableWithNonstandardCountryNames."EuMemberStates2019-02-20") == upper(isoFromCountryNames."EnglishNames");
 ```
 
 ## Python use cases
