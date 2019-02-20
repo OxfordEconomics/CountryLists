@@ -36,47 +36,28 @@ Here is the explanation for the example in Excel: Suppose you have a spreadsheet
 =INDEX(IsoFromCountryNames.csv!$A:$A,MATCH(A2,IsoFromCountryNames.csv!$B:$B,0))
 ```
 
-## SQL use case
+## SQLite use case
 
 Anything starting with `my` in the code below should be changed to your desired name.
 
-First, import the required tables into your database. For example, if you use SQLite, enter these commands into the SQLite command line:
+First, open a command prompt by typing `Win + cmd`.
+
+Next, type the following into the command prompt (make sure a copy of [sqlite3.exe](https://www.sqlite.org/index.html) is in the folder)
 
 ```
-/************************* Import ISO to your SQL database *************************/
-.mode csv
-.import "c:/myDirectory/isoFromCountryNames.csv" isoFromCountryNames
-.import "c:/myDirectory/myTableWithNonstandardCountryNames.csv" myTableWithNonstandardCountryNames
+sqlite3
+.open myDatabaseName  /* This will create a database if it doesn't already exist  */
+.read myScript.sql
 ```
 
-Next, put the following code into a .sql file (called, e.g., `myScript.sql`) and run it in your favourite database manager (e.g., [DBeaver](https://dbeaver.io/)) or in sqlite by typing `.open myDatabaseName` (this will create the database if it doesn't already exist) followed by `.read myScript.sql`:
-```
-/************************* Add ISO codes to table containing non-standard country names *************************/
-/** Create a table in my database called myTableWithStandardCountryNames **/
-CREATE TABLE myTableWithStandardCountryNames AS
+The contents of `myScript.sql` should be:
 
-/** Populate it with all columns (hence ".*") from a table called myTableWithNonstandardCountryNames, plus the ISO column from IsoFromCountryNames and name that column myPreferredColumnName **/
-SELECT myTableWithNonstandardCountryNames.*, isoFromCountryNames.ISO AS myPreferredColumnName
-
-/** The starting table is myTableWithNonstandardCountryNames **/
-FROM myTableWithNonstandardCountryNames
-
-/** The table I want to get the ISO names from is isoFromCountryNames**/
-LEFT OUTER JOIN isoFromCountryNames
-
-/** I want to get the ISO names starting from the columns myColumnNameContainingNonStandardCountryNames and "English short name" **/
-ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(isoFromCountryNames."EnglishNames");
-```
-
-Below is the full example using files in this repository. You can run this script (called, e.g., `myScript.sql`) in sqlite by typing `.open myDatabaseName` (this will create the database if it doesn't already exist) followed by `.read myScript.sql`:
-
-```
-/************************* Import ISO to your SQLite database *************************/
+/************************* Import non standard country names and ISO codes into your SQLite database *************************/
 .mode csv
 .import "isoFromCountryNames.csv" isoFromCountryNames
-.import "countryList-EU.csv" myTableWithNonstandardCountryNames
+.import "countryList-EU.csv" myTableWithNonstandardCountryNames  /* Replace with any csv with non-standard country names  */
 
-/************************* Add ISO codes to table containing non-standard country names *************************/
+/************************* Match ISO codes to table containing non-standard country names *************************/
 /** Create a table in my database called myTableWithStandardCountryNames **/
 CREATE TABLE myTableWithStandardCountryNames AS
 
@@ -89,7 +70,7 @@ FROM myTableWithNonstandardCountryNames
 /** The table I want to get the ISO names from is isoFromCountryNames**/
 LEFT OUTER JOIN isoFromCountryNames
 
-/** I want to get the ISO names starting from the columns myColumnNameContainingNonStandardCountryNames and "English short name" **/
+/** Match the columns "EuMemberStates2019-02-20" and "EnglishNames", and find the associated ISO code **/
 ON upper(myTableWithNonstandardCountryNames."EuMemberStates2019-02-20") == upper(isoFromCountryNames."EnglishNames");
 ```
 
