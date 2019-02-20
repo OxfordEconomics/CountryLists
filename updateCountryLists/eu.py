@@ -19,7 +19,7 @@ soup = soup.find_all('a')
 print(soup)
 
 # Initialise new csv file
-f=open('../CountryList-EU.csv','w')
+f=open('../countryList-EU.csv','w')
 f.write('EuMemberStates'+datetime.datetime.today().strftime('%Y-%m-%d')+'\n')
 f.close()
 
@@ -27,7 +27,7 @@ f.close()
 for x in soup:
 	soup = x.text
 	print(soup)
-	f=open('../CountryList-EU.csv','a')
+	f=open('../countryList-EU.csv','a')
 	f.write(soup+'\n')
 	f.close()
 	
