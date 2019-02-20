@@ -83,7 +83,7 @@ ON upper(myTableWithNonstandardCountryNames."EuMemberStates2019-02-20") == upper
 
 Two Python use cases are suggested below.
 
-### Match ISO codes to country names
+### Match ISO codes to country names with Python
 
 You can find this example in the [exampleUseCase-Python folder](https://github.com/OxfordEconomics/CountryLists/tree/master/exampleUseCase-Python).
 
@@ -108,7 +108,7 @@ standardCountryNames.to_csv('standardCountryNames.csv')
 
 ```
 
-### Update countryList-XX.csv files
+### Update countryList-XX.csv files with Python
 Use the Python files to update the the CountryList-XX.csv files.
 
 Before doing anything else, install dependencies by typing these one at a time into your command prompt:
