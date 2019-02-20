@@ -72,7 +72,7 @@ ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCou
 
 ### Match ISO codes to country names
 
-You can find this example in a Python file [here](https://github.com/OxfordEconomics/CountryLists/tree/master/exampleUseCase-Python).
+You can find this example in the [exampleUseCase-Python folder](https://github.com/OxfordEconomics/CountryLists/tree/master/exampleUseCase-Python).
 
 ```
 # Import dependencies
@@ -111,7 +111,7 @@ To run an individual python file, for example *asean.py*, type the following int
 py asean.py
 ```
 
-To run all python files at once, download or clone this repository to your PC, then double click the `RunAll.bat` file in the `/code` folder. 
+To run all python files at once, download or clone this repository to your PC, then double click the `RunAll.bat` file in the [updateCountryLists folder](https://github.com/OxfordEconomics/CountryLists/tree/master/updateCountryLists) folder. 
 
 
 
