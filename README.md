@@ -45,7 +45,7 @@ First, import the required tables into your database. For example, if you use SQ
 ```
 /************************* Import ISO to your SQL database *************************/
 .mode csv
-.import "c:/myDirectory/IsoFromCountryNames.csv" IsoFromCountryNames
+.import "c:/myDirectory/isoFromCountryNames.csv" isoFromCountryNames
 .import "c:/myDirectory/myTableWithNonstandardCountryNames.csv" myTableWithNonstandardCountryNames
 ```
 
@@ -56,19 +56,21 @@ Next, put the following code into a .sql file and run it, either via a command p
 CREATE TABLE myTableWithStandardCountryNames AS
 
 /** Populate it with all columns (hence ".*") from a table called myTableWithNonstandardCountryNames, plus the ISO column from IsoFromCountryNames and name that column myPreferredColumnName **/
-SELECT myTableWithNonstandardCountryNames.*, IsoFromCountryNames.ISO AS myPreferredColumnName
+SELECT myTableWithNonstandardCountryNames.*, isoFromCountryNames.ISO AS myPreferredColumnName
 
 /** The starting table is myTableWithNonstandardCountryNames **/
 FROM myTableWithNonstandardCountryNames
 
-/** The table I want to get the ISO names from is IsoFromCountryNames**/
-LEFT OUTER JOIN IsoFromCountryNames
+/** The table I want to get the ISO names from is isoFromCountryNames**/
+LEFT OUTER JOIN isoFromCountryNames
 
 /** I want to get the ISO names starting from the columns myColumnNameContainingNonStandardCountryNames and "English short name" **/
-ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(IsoFromCountryNames."English short name");
+ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(isoFromCountryNames."English short name");
 ```
 
-## Python use case
+## Python use cases
+
+Two Python use cases are suggested below.
 
 ### Match ISO codes to country names
 
