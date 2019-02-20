@@ -52,6 +52,7 @@ sqlite3
 
 The contents of `myScript.sql` should be:
 
+```
 /************************* Import non standard country names and ISO codes into your SQLite database *************************/
 .mode csv
 .import "isoFromCountryNames.csv" isoFromCountryNames
