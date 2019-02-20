@@ -68,7 +68,7 @@ LEFT OUTER JOIN isoFromCountryNames
 ON upper(myTableWithNonstandardCountryNames.myColumnNameContainingNonStandardCountryNames) == upper(isoFromCountryNames."EnglishNames");
 ```
 
-Here it is using files in this repository as an example:
+Here is the full example using files in this repository:
 
 ```
 /************************* Import ISO to your SQLite database *************************/
@@ -81,7 +81,7 @@ Here it is using files in this repository as an example:
 CREATE TABLE myTableWithStandardCountryNames AS
 
 /** Populate it with all columns (hence ".*") from a table called myTableWithNonstandardCountryNames, plus the ISO column from IsoFromCountryNames and name that column myPreferredColumnName **/
-SELECT myTableWithNonstandardCountryNames."EuMemberStates2019-02-20", isoFromCountryNames.ISO AS ISO
+SELECT myTableWithNonstandardCountryNames.*, isoFromCountryNames.ISO AS ISO
 
 /** The starting table is myTableWithNonstandardCountryNames **/
 FROM myTableWithNonstandardCountryNames
