@@ -53,10 +53,14 @@ sqlite3
 Example of what `myScript.sql` could contain:
 
 ```
-/************************* Import non standard country names and ISO codes into your SQLite database *************************/
+/* Tell sqlite we are about to import some comma separated values files  */
 .mode csv
+
+/* Import our standard iso list  */
 .import "isoFromCountryNames.csv" isoFromCountryNames
-.import "countryList-EU.csv" myTableWithNonstandardCountryNames  /* Replace with any csv with non-standard country names  */
+
+/* Replace with any csv with non-standard country names  */
+.import "countryList-EU.csv" myTableWithNonstandardCountryNames  
 
 /************************* Match ISO codes to table containing non-standard country names *************************/
 /** Create a table in my database called myTableWithStandardCountryNames **/
