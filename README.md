@@ -42,7 +42,7 @@ Anything starting with `my` in the code below should be changed to your desired 
 
 First, open a command prompt by typing `Win + cmd`.
 
-Next, type the following into the command prompt (make sure a copy of [sqlite3.exe](https://www.sqlite.org/index.html) is in the folder)
+Next, type the following into the command prompt (make sure a copy of [sqlite3.exe](https://www.sqlite.org/index.html) is in the working directory)
 
 ```
 sqlite3
