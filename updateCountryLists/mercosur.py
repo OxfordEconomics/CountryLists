@@ -28,8 +28,7 @@ memberstates = memberstates.replace("Associated States","\n"+"# ASSOCIATED STATE
 memberstates = memberstates.replace("States Parties","\n"+"# STATES PARTIES"+"\n")
 
 # Add date to beginning of file and remove brackets from end of file
-memberstates = memberstates.replace("[","CountryName"+datetime.datetime.today().strftime('%Y-%m-%d')+"\n").replace(",]","")
-
+memberstates = memberstates.replace("[","CountryName"+datetime.datetime.today().strftime('%Y-%m-%d')+"\n").replace(",]","\n")
 
 f = open('../countryList-mercosur.csv','w')
 f.write(memberstates)
