@@ -36,7 +36,3 @@ f.close()
 
 f = open('../countryList-mercosur.csv','r')
 print(f.readlines())
-
-
-
-
