@@ -1,4 +1,6 @@
-# Get UN country list
+# Get Mercosur country list
+
+# Recommended use: Do not run this script more than once per day. The Mercosur website uses a Wordpress plugin called Bad Behaviour which blocks access if it observes too many requests from the same source.
 
 # Install dependencies
 # pip install requests
@@ -30,9 +32,9 @@ memberstates = memberstates.replace("States Parties","\n"+"# STATES PARTIES"+"\n
 # Add date to beginning of file and remove brackets from end of file
 memberstates = memberstates.replace("[","CountryName"+datetime.datetime.today().strftime('%Y-%m-%d')+"\n").replace(",]","\n")
 
-f = open('../countryList-mercosur.csv','w')
+f = open('../countryList-Mercosur.csv','w')
 f.write(memberstates)
 f.close()
 
-f = open('../countryList-mercosur.csv','r')
+f = open('../countryList-Mercosur.csv','r')
 print(f.readlines())
