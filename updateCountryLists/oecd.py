@@ -12,11 +12,22 @@ page = urllib.request.urlopen('http://www.oecd.org/about/membersandpartners/list
 
 soup = BeautifulSoup(page,'html.parser')
 
-soup = soup.find('table',align='center')
+soup = soup.find_all('a', href=True, class_='country-list__country')
 
-soup = soup.find_all('a')
+# Initialise list
+oecdCountries = []
 
-print (soup)
+# Add link contents to list
+for x in soup:
+	x = x.text
+	oecdCountries.append(x)
+
+# Define countries that are not OECD countries but have the 'country-list__country' class
+notReallyOecdCountries = ["Colombia", "Costa Rica", "Brazil", "China", "India", "Indonesia", "South Africa", "Africa", "Eurasia", "Latin America", "Middle East and North Africa", "Southeast Asia", "South East Europe"]
+
+# Remove non OECD countries from our list
+for j in notReallyOecdCountries:
+	oecdCountries.remove(j)
 
 # Initialise new csv file
 f=open('../countryList-OECD.csv','w')
@@ -24,11 +35,7 @@ f.write('OecdMembers'+datetime.datetime.today().strftime('%Y-%m-%d')+'\n')
 f.close()
 
 # Add countries
-for x in soup:
-	if x.text != 'More on membership and enlargement':
-		soup = x.text.title() #use title() to capitalise the beginning of each part of country names
-		print(soup)
-		f=open('../countryList-OECD.csv','a')
-		f.write(soup+'\n')
-		f.close()
-	
+for x in oecdCountries:
+	f=open('../countryList-OECD.csv','a')
+	f.write(x+'\n')
+	f.close()
